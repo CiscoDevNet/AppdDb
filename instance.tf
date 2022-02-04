@@ -17,10 +17,13 @@ variable "globalwsname" {
 
 # Configure the VMware vSphere Provider
 provider "vsphere" {
-  user           = local.vsphere_user
-  password       = local.vsphere_password
-  vsphere_server = local.vsphere_server
+  user           = "administrator@vsphere.local" 
+  password       = "Password1."
+  vsphere_server = "mx-lab-iks.cisco.com"
 
+  #user           = local.vsphere_user
+  #password       = local.vsphere_password
+  #vsphere_server = local.vsphere_server
   # If you have a self-signed cert
   allow_unverified_ssl = true
 }

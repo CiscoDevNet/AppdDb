@@ -19,7 +19,7 @@ variable "globalwsname" {
 provider "vsphere" {
   user           = "administrator@vsphere.local" 
   password       = "Password1."
-  vsphere_server = "mx-lab-p-iks.cisco.com"
+  vsphere_server = "10.88.168.121"
 
   #user           = local.vsphere_user
   #password       = local.vsphere_password

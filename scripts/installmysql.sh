@@ -3,8 +3,8 @@ echo $1
 sudo apt update
 apt-get install debconf
 export DEBIAN_FRONTEND=noninteractive 
-debconf-set-selections <<< 'mysql-server-5.1 mysql-server/root_password password '$1''
-debconf-set-selections <<< 'mysql-server-5.1 mysql-server/root_password_again password '$1''
+debconf-set-selections <<< 'mysql-server-5.7 mysql-server/root_password password '$1''
+debconf-set-selections <<< 'mysql-server-5.7 mysql-server/root_password_again password '$1''
 # debconf-set-selections <<< "mysql-server mysql-server/root_password password '$1'"
 # sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password '$1'"
 sudo apt-get -y install mysql-server
